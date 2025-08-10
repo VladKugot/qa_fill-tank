@@ -36,13 +36,13 @@ describe('fillTank', () => {
     const customer = {
       money: 100, // can only afford 2 liters at 50/l
       vehicle: {
-        maxTankCapacity: 40,
+        maxTankCapacity: 50,
         fuelRemains: 8,
       },
     };
 
-    fillTank(customer, 50, 10);
-    expect(customer.vehicle.fuelRemains).toBe(10); // +2 liters
+    fillTank(customer, 30, 20);
+    expect(customer.vehicle.fuelRemains).toBe(11.3); // +2 liters
     expect(customer.money).toBe(0);
   });
 
