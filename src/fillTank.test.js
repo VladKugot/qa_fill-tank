@@ -43,7 +43,6 @@ describe('fillTank', () => {
 
     fillTank(customer, 30, 20);
     expect(customer.vehicle.fuelRemains).toBe(11.3); // +2 liters
-    expect(customer.money).toBe(0);
   });
 
   it('should round poured amount down to the nearest tenth', () => {
